@@ -1,6 +1,6 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>New user Register for DevOps Learning</h1>
+    <h1>Welcome to the App used for my final Engineering report</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
      
@@ -31,7 +31,8 @@
     <p>Already have an account? <a href="#">Sign in</a>.</p>
   </div>
 
-   <h1> Thankyou, Happy Learning </h1>
+   <h1> Mamadou Mbengue, Email: "memedou9@gmail.com"
+    Thank you </h1>
 
   
 </form>
