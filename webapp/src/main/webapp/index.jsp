@@ -31,8 +31,8 @@
     <p>Already have an account? <a href="#">Sign in</a>.</p>
   </div>
 
-   <h2> Mamadou Mbengue Email: "memedou9@gmail.com"</h2>
-   <h3>Thank You</h3>
+   <h1> Mamadou Mbengue, Email: "memedou9@gmail.com" Thank you </h1>
+   <h2>Thank You</h2>
 
   
 </form>
