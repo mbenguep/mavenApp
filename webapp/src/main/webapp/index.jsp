@@ -32,7 +32,7 @@
   </div>
 
    <h2> Mamadou Mbengue, Email: "memedou9@gmail.com"</h2>
-   <h3>Thank You</h3>
+   <h2>Thank You</h2>
 
   
 </form>
