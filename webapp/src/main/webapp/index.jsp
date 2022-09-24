@@ -31,7 +31,7 @@
     <p>Already have an account? <a href="#">Sign in</a>.</p>
   </div>
 
-   <h1> Mamadou Mbengue, Email: "memedou9@gmail.com"</h1>
+   <h1> Mbaye ndiaye, Email: "memedou9@gmail.com"</h1>
    <h2>Thank You</h2>
 
   
