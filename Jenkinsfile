@@ -25,7 +25,7 @@ code node{
         sleep 10;
         ansible-playbook /opt/docker/deploy_regapp.yml''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, 
         noDefaultExcludes: false, patternSeparator: '[, ]+', 
-        remoteDirectory: '//opt//docker', remoteDirectorySDF: false, removePrefix: 'webapp/target', sourceFiles: 'webapp/target/*.war')], 
+        remoteDirectory: '/opt/docker', remoteDirectorySDF: false, removePrefix: 'webapp/target', sourceFiles: 'webapp/target/*.war')], 
         usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
 }
