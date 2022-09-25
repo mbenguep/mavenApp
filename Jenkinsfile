@@ -23,7 +23,7 @@ node{
         sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '',
         execCommand: '''ansible-playbook /opt/docker/regapp.yml;
         sleep 10;
-        ansible-playbook /opt/docker/deploy_regapp.yml''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, 
+        ansible-playbook /opt/docker/deploy_regapp.yml''', execTimeout: 1200000, flatten: false, makeEmptyDirs: false, 
         noDefaultExcludes: false, patternSeparator: '[, ]+', 
         remoteDirectory: '//opt//docker', remoteDirectorySDF: false, removePrefix: 'webapp/target', sourceFiles: 'webapp/target/*.war')], 
         usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
