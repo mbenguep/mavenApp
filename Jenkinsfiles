@@ -20,7 +20,8 @@ node{
     stage('Copy Artifact to Ansible-Server'){
         // getting maven home path
 
-        sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''ansible-playbook create_image.yml;
+        sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
+        execCommand: '''ansible-playbook create_image.yml;
         sleep 10;
         ansible-playbook -i /opt/docker/inventory /opt/docker/kube_deploy.yml;
         sleep 10;
