@@ -23,7 +23,7 @@ node{
         sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
         execCommand: '''ansible-playbook create_image.yml;
         sleep 10;
-        ansible-playbook -i /opt/docker/inventory /opt/docker/kube_deploy.yml;
+        ansible-playbook -i inventory kube_deploy.yml;
         sleep 10;
         ansible-playbook -i inventory kube_service.yml
         ''', execTimeout: 0, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', 
