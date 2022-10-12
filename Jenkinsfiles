@@ -21,13 +21,9 @@ node{
         // getting maven home path
 
         sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
-        execCommand: '''ansible-playbook create_image.yml;
-        sleep 10;
-        ansible-playbook -i inventory kube_deploy.yml;
-        sleep 10;
-        ansible-playbook -i inventory kube_service.yml
-        ''', execTimeout: 1200000000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', 
-        remoteDirectory: '//opt//docker', remoteDirectorySDF: false, removePrefix: 'webapp/target', 
-        sourceFiles: 'webapp/target/*.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+        execCommand: 'ansible-playbook create_image.yml', execTimeout: 120000, flatten: false, makeEmptyDirs: false, 
+        noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//docker', remoteDirectorySDF: false, 
+        removePrefix: 'webapp/target', sourceFiles: 'webapp/target/*.war')], 
+        usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
 }
