@@ -23,9 +23,12 @@ node{
         sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
         execCommand: '''cd /opt/docker;
         ansible-playbook create_image.yml;
+        sleep 5;
         ansible-playbook -i inventory kube_deploy.yml;
+        sleep 5;
         ansible-playbook -i inventory  kube_service.yml;
-        ansible-playbook -i inventory kube_route.yml''', execTimeout: 12000000, flatten: false, makeEmptyDirs: false, 
+        sleep 5;
+        ansible-playbook -i inventory kube_route.yml''', execTimeout: 30000000, flatten: false, makeEmptyDirs: false, 
         noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//docker', remoteDirectorySDF: false, 
         removePrefix: 'webapp/target', sourceFiles: 'webapp/target/*.war')], usePromotionTimestamp: false, 
         useWorkspaceInPromotion: false, verbose: false)])
