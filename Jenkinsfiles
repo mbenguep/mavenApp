@@ -32,9 +32,9 @@ node{
         // getting maven home path
 
     sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
-    execCommand: '''ansible-playbook -i /opt/docker/inventory /opt/docker/kube_deploy.yml;
-    ansible-playbook -i /opt/docker/inventory /opt/docker/kube_service.yml''', execTimeout: 3000000, flatten: false, 
+    execCommand: 'ansible-playbook -i /opt/docker/inventory /opt/docker/kube_deploy.yml', execTimeout: 3000000, flatten: false, 
     makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, 
     removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+
 }
 }
