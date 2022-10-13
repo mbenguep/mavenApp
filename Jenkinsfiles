@@ -26,9 +26,7 @@ node{
         sleep 5;
         ansible-playbook -i inventory kube_deploy.yml;
         sleep 5;
-        ansible-playbook -i inventory  kube_service.yml;
-        sleep 5;
-        ansible-playbook -i inventory kube_route.yml''', execTimeout: 30000000, flatten: false, makeEmptyDirs: false, 
+        ansible-playbook -i inventory  kube_service.yml''', execTimeout: 30000000, flatten: false, makeEmptyDirs: false, 
         noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//docker', remoteDirectorySDF: false, 
         removePrefix: 'webapp/target', sourceFiles: 'webapp/target/*.war')], usePromotionTimestamp: false, 
         useWorkspaceInPromotion: false, verbose: false)])
