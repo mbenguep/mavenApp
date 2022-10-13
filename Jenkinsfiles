@@ -24,9 +24,9 @@ node{
         execCommand: '''cd /opt/docker;
         ansible-playbook create_image.yml;
         sleep 5;
-        ansible-playbook -i inventory kube_deploy.yml;
+        ansible-playbook -i /opt/docker/inventory /opt/docker/kube_deploy.yml;
         sleep 5;
-        ansible-playbook -i inventory  kube_service.yml''', execTimeout: 30000000, flatten: false, makeEmptyDirs: false, 
+        ansible-playbook -i /opt/docker/inventory  /opt/docker/kube_service.yml''', execTimeout: 300000000, flatten: false, makeEmptyDirs: false, 
         noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//docker', remoteDirectorySDF: false, 
         removePrefix: 'webapp/target', sourceFiles: 'webapp/target/*.war')], usePromotionTimestamp: false, 
         useWorkspaceInPromotion: false, verbose: false)])
