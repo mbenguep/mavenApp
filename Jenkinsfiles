@@ -58,7 +58,7 @@ node{
 
 }
 
-    stage('create service onto openshift'){
+    stage('creating route to access the App'){
         // getting maven home path
 
     sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
