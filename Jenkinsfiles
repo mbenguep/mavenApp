@@ -31,12 +31,11 @@ node{
     stage('Deploy the onto openshift'){
         // getting maven home path
 
-        sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''cd /opt/docker;
-        ansible-playbook -i inventory kube_deploy.yml;
-        sleep 5;
-        ansible-playbook -i inventory  kube_service.yml''', execTimeout: 30000000, flatten: false, makeEmptyDirs: false, 
-        noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//docker', remoteDirectorySDF: false, 
-        removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+        sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
+        execCommand: '''cd /opt/docker;
+        ansible-playbook -i kube_deploy.yml''', execTimeout: 3000000, flatten: false, makeEmptyDirs: false, 
+        noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', 
+        sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
 
 }
 }
