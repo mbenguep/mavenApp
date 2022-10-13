@@ -31,11 +31,19 @@ node{
     stage('Deploy the onto openshift'){
         // getting maven home path
 
-        sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
-        execCommand: '''ansible-playbook -i /opt/docker/inventory /opt/docker/kube_deploy.yml;
-        sleep 5;
-        ansible-playbook -i /opt/docker/inventory /opt/docker/kube_route.yml''', execTimeout: 90000000, flatten: false, 
-        makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, 
-        removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+    sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
+    execCommand: '''ansible-playbook -i /opt/docker/inventory /opt/docker/kube_deploy.yml;
+    ansible-playbook -i /opt/docker/inventory /opt/docker/kube_service.yml''', execTimeout: 3000000, flatten: false, 
+    makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, 
+    removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+}
+    stage('Create service onto openshift'){
+        // getting maven home path
+
+    sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', 
+    execCommand: '''ansible-playbook -i /opt/docker/inventory /opt/docker/kube_service.yml;
+    ansible-playbook -i /opt/docker/inventory /opt/docker/kube_service.yml''', execTimeout: 3000000, flatten: false, 
+    makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, 
+    removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
 }
 }
