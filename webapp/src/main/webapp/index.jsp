@@ -1,38 +1,71 @@
-<form action="action_page.php">
-  <div class="container">
-    <h1>Welcome to the App used for my final Engineering report</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
-     
-    <label for="Name"><b>Enter Name</b></label>
-    <input type="text" placeholder="Enter Full Name" name="Name" id="Name" required>
-    <br>
-    
-    <label for="mobile"><b>Enter mobile</b></label>
-    <input type="text" placeholder="Enter moible number" name="mobile" id="mobile" required>
-    <br>
+<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
 
-    <label for="email"><b>Enter Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-    <br>
+            <form class="px-md-2">
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <br>
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control" />
+                <label class="form-label" for="form3Example1q">Name</label>
+              </div>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    <hr>
-    <br>
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" id="exampleDatepicker1" />
+                    <label for="exampleDatepicker1" class="form-label">Select a date</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <select class="select">
+                    <option value="1" disabled>Gender</option>
+                    <option value="2">Female</option>
+                    <option value="3">Male</option>
+                    <option value="4">Other</option>
+                  </select>
+
+                </div>
+              </div>
+
+              <div class="mb-4">
+
+                <select class="select">
+                  <option value="1" disabled>Class</option>
+                  <option value="2">Class 1</option>
+                  <option value="3">Class 2</option>
+                  <option value="4">Class 3</option>
+                </select>
+
+              </div>
+
+              <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                <div class="col-md-6">
+
+                  <div class="form-outline">
+                    <input type="text" id="form3Example1w" class="form-control" />
+                    <label class="form-label" for="form3Example1w">Registration code</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
-
-   <h2> Sylvestre Mbengue, Email: "memedou9@gmail.com"</h2>
-   <h3>Thank You</h3>
-
-  
-</form>
+</section>
