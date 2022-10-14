@@ -65,7 +65,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Password" name="psw">
+    <input class="input-field" type="password" placeholder="Mamesamba" name="psw">
   </div>
 
   <button type="submit" class="btn">Register</button>
