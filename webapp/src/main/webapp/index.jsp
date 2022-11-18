@@ -86,7 +86,7 @@ a {
     <hr>
     <p>Final engineering report by <a href="#">Computer Science</a>.</p>
 
-    <button type="submit" class="registerbtn">Thank you</button>
+    <button type="submit" class="registerbtn">Thankyou</button>
   </div>
   
   <div class="container signin">
