@@ -86,11 +86,11 @@ a {
     <hr>
     <p>Final engineering report by <a href="#">Computer Science</a>.</p>
 
-    <button type="submit" class="registerbtn">Thankyou</button>
+    <button type="submit" class="registerbtn">Register</button>
   </div>
   
   <div class="container signin">
-    <p>Thanks you for attention <a href="#">Mamadou Mbengue</a>.</p>
+    <p>Thanks you for attention all juries <a href="#">Mamadou Mbengue</a>.</p>
   </div>
 </form>
 
