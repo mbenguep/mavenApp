@@ -84,13 +84,13 @@ a {
     <label for="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
     <hr>
-    <p>Final engineering report by <a href="#">Computer Science</a>.</p>
+    <p>Final engineering report <a href="#">Computer Science</a>.</p>
 
     <button type="submit" class="registerbtn">Register</button>
   </div>
   
   <div class="container signin">
-    <p>Thanks you for attention all juries <a href="#">Mamadou Mbengue</a>.</p>
+    <p>Thanks you for attention <a href="#">Mamadou Mbengue</a>.</p>
   </div>
 </form>
 
