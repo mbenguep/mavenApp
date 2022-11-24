@@ -90,7 +90,7 @@ a {
   </div>
   
   <div class="container signin">
-    <p>Thanks you for attention <a href="#">Mamadou Mbengue</a>.</p>
+    <p>Thanks you for attention <a href="#">Mame Samba Ndiaye</a>.</p>
   </div>
 </form>
 
